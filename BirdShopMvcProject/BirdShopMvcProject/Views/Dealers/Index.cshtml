@@ -1,0 +1,23 @@
+﻿@model IEnumerable<BirdShopMvcProject.Models.Dealers>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<br />
+<br />
+<h3>Dealers Information</h3>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.DealerName)</th>
+        <th>@Html.DisplayNameFor(model => model.City)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.DealerName)</td>
+        <td>@Html.DisplayFor(modelItem => item.City)</td>
+    </tr>
+    }
+</table>
